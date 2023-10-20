@@ -1,6 +1,16 @@
 import express from 'express';
+import { costumesRouter } from './router/Router.js';
+import cors from 'cors';
+
+const port = process.env.PORT || 8001;
+
 const app = express();
-const port = process.env.PORT || 3001;
+
+app.use(express.json());
+
+app.use(cors());
+
+app.use('/db', costumesRouter);
 
 app.get('/', (req, res) => res.type('html').send(html));
 
@@ -56,7 +66,7 @@ const html = `
   </head>
   <body>
     <section>
-      Hello from Render!
+    Hello, this is the Santo's API !
     </section>
   </body>
 </html>
