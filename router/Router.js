@@ -21,5 +21,5 @@ costumesRouter.post('/sendVoto', controllers.sendVotoController);
 // getVotos
 costumesRouter.get('/getVotos', controllers.getVotosController);
 
-// deleteCostume
+// deleteVoto
 costumesRouter.delete('/deleteVoto/:id', controllers.deleteVotosController);

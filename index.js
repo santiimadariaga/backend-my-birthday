@@ -8,7 +8,12 @@ const app = express();
 
 app.use(express.json());
 
-app.use(cors());
+app.use(
+  cors({
+    origin: 'https://my-birthday-front.vercel.app/',
+    credentials: true,
+  })
+);
 
 app.use('/db', costumesRouter);
 
